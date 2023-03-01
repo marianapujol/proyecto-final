@@ -18,6 +18,11 @@
         border: 0.1px solid #D0D0D0;
       }
 
+      .hidden {
+        display: none;
+        
+      }
+
       .content-container {
         padding: 40px 80px;
       }
@@ -37,10 +42,6 @@
 
       .card-title:hover {
         cursor: pointer;
-      }
-
-      .card-title {
-        margin-bottom: 20px;
       }
 
       .profile-img {
@@ -83,10 +84,11 @@
       </div>
     
       <div id="experienceContainer" class="card closed">
-        <div class="card-title">
+        <div id="experienceContainerTitle" class="card-title">
           <h3 style="margin: 0;">Experience</h3>
         </div>
-        <div class="card-content">
+        <div id="experienceContainerContent" class="card-content hidden" >
+          <br>
           <div class="flex-container">
             <div>
               <img class="element-img" src="http://d3ugyf2ht6aenh.cloudfront.net/stores/001/915/482/products/u-091-fc6be2428993e616da16377618154208-640-0.webp" alt="">
@@ -112,11 +114,32 @@
       </div>
     
       <div id="educationContainer" class="card closed">
-        <div class="card-title">
+        <div id="educationContainerTitle" class="card-title">
           <h3 style="margin: 0;">Education</h3>
         </div>
-        <div class="card-content flex-container">
-          
+        <div id="educationContainerContent" class="card-content hidden" >
+          <br>
+          <div class="flex-container">
+            <div>
+              <img class="element-img" src="https://seeklogo.com/images/M/monsters-university-logo-272139423B-seeklogo.com.png" alt="">
+            </div>
+            <div>
+              <p style="font-size:130%;">Monsters University</p>
+              <p>Ingenieria en sistemas de la informnacion</p>
+              <p style="color:#6f6f6f;">mar 2006 - dic 2011</p>
+            </div>
+          </div>
+          <hr>
+          <div class="flex-container">
+            <div>
+              <img class="element-img" src="https://i.pinimg.com/736x/cd/83/76/cd83766339363274d27d3bc51e504b20.jpg" alt="">
+            </div>
+            <div>
+              <p style="font-size:130%;">Escuela N° 9</p>
+              <p>Bachiller en Economía y Administración</p>
+              <p style="color:#6f6f6f;">sep 2000 - feb 2005</p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -127,10 +150,30 @@
 
 
     <script>
+      
+      document
+        .getElementById('experienceContainerTitle')
+        .addEventListener('click', () => {
+          let experienceContainerContent = document.getElementById('experienceContainerContent')
+          let classNameList = experienceContainerContent.className.split(" ")
 
-        window.onload = async () => {
-           
-        }
+          experienceContainerContent.classList.toggle("hidden")
+        });
+
+      document
+        .getElementById('educationContainerTitle')
+        .addEventListener('click', () => {
+          let educationeContainerContent = document.getElementById('educationContainerContent')
+          let classNameList = educationContainerContent.className.split(" ")
+
+          educationContainerContent.classList.toggle("hidden")
+        });
+
+      
+
+
+
+       
 
     </script>
     
