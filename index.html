@@ -10,7 +10,15 @@
         font-family: sans-serif, Verdana, Tahoma;
       }
 
-      .contentContainer {
+      p {
+        margin: 5px;
+      }
+
+      hr {
+        border: 0.1px solid #D0D0D0;
+      }
+
+      .content-container {
         padding: 40px 80px;
       }
 
@@ -23,13 +31,29 @@
       }
 
       .card:hover {
-        box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
+        box-shadow: 
+        0 6px 12px 0 rgba(0,0,0,0.2);
       }
 
-      .profileImg {
+      .card-title:hover {
+        cursor: pointer;
+      }
+
+      .card-title {
+        margin-bottom: 20px;
+      }
+
+      .profile-img {
         border-radius: 50%;
         width: 180px;
         height: 180px; 
+      }
+
+      .element-img {
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        margin-right: 15px;
       }
 
       .flex-container {
@@ -40,28 +64,60 @@
   </head>
   <body>    
 
-    <div class="contentContainer">
+    <div class="content-container">
 
-      <div id="profileContainer" class="card flex-container closed">
-        <div style="margin-right: 60px;">
-          <img class="profileImg" src="https://fotomanias.com.ar/wp-content/uploads/2019/03/foto-carnet-fondo-celeste.jpg"></img>
-        </div>
-        <div style="margin-top: 5px;">
-          <h1 style="margin: 0;">María Isabel García</h1>
-          <h2 style="margin: 0;">Software Developer</h2>
-          <br>
-          <p style="margin: 5px;">maria.garcia@mail.com</p>
-          <p style="margin: 5px;">+54 9 11 1234-5678</p>
-          <p style="margin: 5px;">https://www.linkedin.com/in/mariagarcia</p>
+      <div id="profileContainer" class="card closed">
+        <div class="card-content flex-container">
+          <div style="margin-right: 60px;">
+            <img class="profile-img" src="https://www.planetacurioso.com/wp-content/uploads/2022/04/mike-wazowski-ojo.webp"></img>
+          </div>
+          <div style="margin-top: 5px;">
+            <h1 style="margin: 0;">Mike Wazowski</h1>
+            <h2 style="margin: 0;">Software Developer</h2>
+            <br>
+            <p>mike.wazowski@mail.com</p>
+            <p>+54 9 11 1234-5678</p>
+            <p>https://www.linkedin.com/in/mike-wazowski</p>
+          </div>
         </div>
       </div>
     
       <div id="experienceContainer" class="card closed">
-        <h4 style="margin: 0;">Experience</h4>
+        <div class="card-title">
+          <h3 style="margin: 0;">Experience</h3>
+        </div>
+        <div class="card-content">
+          <div class="flex-container">
+            <div>
+              <img class="element-img" src="http://d3ugyf2ht6aenh.cloudfront.net/stores/001/915/482/products/u-091-fc6be2428993e616da16377618154208-640-0.webp" alt="">
+            </div>
+            <div>
+              <p style="font-size:130%;">Monsters Incorporated</p>
+              <p>Desarrollador de software en la fabrica de sustos Monsters Incorporated</p>
+              <p style="color:#6f6f6f;">feb 2010 - actualidad</p>
+            </div>
+          </div>
+          <hr>
+          <div class="flex-container">
+            <div>
+              <img class="element-img" src="https://i.pinimg.com/originals/5b/9e/9a/5b9e9ac5c8338624017f3213c9761af8.png" alt="">
+            </div>
+            <div>
+              <p style="font-size:130%;">Pizza Planet</p>
+              <p>Maestro pizzero en Pizza Planet, especialista en pizza de pepperoni</p>
+              <p style="color:#6f6f6f;">sep 2004 - feb 2010</p>
+            </div>
+          </div>
+        </div>
       </div>
     
       <div id="educationContainer" class="card closed">
-        <h4 style="margin: 0;">Education</h4>
+        <div class="card-title">
+          <h3 style="margin: 0;">Education</h3>
+        </div>
+        <div class="card-content flex-container">
+          
+        </div>
       </div>
 
     </div>
